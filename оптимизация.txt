@@ -1,0 +1,31 @@
+--set statistics io on
+--set statistics time on
+
+
+USE [ib-db]
+GO
+
+SET ANSI_PADDING ON
+GO
+
+/****** Object:  Index [NonClusteredProductId]    Script Date: 03.09.2021 17:01:53 ******/
+CREATE NONCLUSTERED INDEX [NonClusteredProductId] ON [dbo].[StandingOrder]
+(
+	[ProductId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+
+
+USE [ib-db]
+GO
+
+/****** Object:  Index [NonClusteredStatusdoType]    Script Date: 03.09.2021 17:27:57 ******/
+CREATE NONCLUSTERED INDEX [NonClusteredStatusdoType] ON [dbo].[DepositOperation]
+(
+	[status] ASC,
+	[doType] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+

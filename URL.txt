@@ -1,0 +1,8 @@
+Операция MERGE в языке Transact-SQL – описание и примеры
+http://info-comp.ru/obucheniest/561-merge-in-t-sql.html
+
+Исследуем базы данных с помощью T-SQL
+https://habr.com/ru/articles/241079/
+
+How to Tune Microsoft SQL Server for Performance
+https://www.toptal.com/sql-server/how-to-tune-microsoft-sql-server-for-performance

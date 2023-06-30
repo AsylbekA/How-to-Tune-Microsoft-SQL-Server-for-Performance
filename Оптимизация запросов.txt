@@ -1,0 +1,83 @@
+--set statistics io on
+--set statistics time on
+
+
+-- 1 запрос
+/****** Object:  Index [NonClusteredUserLogin]    Script Date: 03.09.2021 11:37:20 ******/
+CREATE NONCLUSTERED INDEX [NonClusteredUserLogin] ON [dbo].[Users]
+(
+	[userLogin] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+--2 запрос
+
+USE [ib-db]
+GO
+
+/****** Object:  Index [NonClusteredRefId]    Script Date: 03.09.2021 13:34:59 ******/
+CREATE NONCLUSTERED INDEX [NonClusteredRefId] ON [dbo].[Document]
+(
+	[RefId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+
+USE [ib-db]
+GO
+
+/****** Object:  Index [NonClusteredRequestId]    Script Date: 03.09.2021 13:35:36 ******/
+CREATE NONCLUSTERED INDEX [NonClusteredRequestId] ON [dbo].[Rate]
+(
+	[RequestId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+USE [ib-db]
+GO
+
+/****** Object:  Index [NonClusteredRequestId]    Script Date: 03.09.2021 13:36:24 ******/
+CREATE NONCLUSTERED INDEX [NonClusteredRequestId] ON [dbo].[Transfer]
+(
+	[RequestId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+
+
+USE [ib-db]
+GO
+
+SET ANSI_PADDING ON
+GO
+
+/****** Object:  Index [NonClusteredRefTypeOrdinal]    Script Date: 03.09.2021 13:44:38 ******/
+CREATE NONCLUSTERED INDEX [NonClusteredRefTypeOrdinal] ON [dbo].[Document]
+(
+	[RefType] ASC,
+	[Ordinal] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+
+-- 3 запрос
+
+
+USE [ib-db]
+GO
+
+/****** Object:  Index [NonClusteredDeviceId]    Script Date: 03.09.2021 13:54:53 ******/
+CREATE NONCLUSTERED INDEX [NonClusteredDeviceId] ON [dbo].[Passcode]
+(
+	[DeviceId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+
+
+
+
+
+
+
+
